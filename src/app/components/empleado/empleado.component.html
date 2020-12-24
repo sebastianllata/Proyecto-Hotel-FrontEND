@@ -1,0 +1,124 @@
+<div class="container-fluid">
+    <div class="container">
+        
+        <div class="d-flex justify-content-between mb-3 border-bottom">
+            <div class="p-2 ">
+                <h5>Bienvenido a la ventana empleados</h5>
+                <p>Realize sus actividades de manera ordinaria</p>
+            </div>
+            <div class="p-2 ">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"  aria-controls="v-pills-home" ><i class="fa fa-tv"></i> HOME</button>
+                    <button type="button" class="btn btn-danger" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"  aria-controls="v-pills-profile" ><i class="fa fa-th-list"></i> Listar Empleados</button>
+                    <button type="button" class="btn btn-danger" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"  aria-controls="v-pills-messages" ><i class="fa fa-users"></i> Registrar Empleados</button>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+
+    <div class="container">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" >
+              <h1>Empleados</h1>
+              
+            
+            </div>
+            <!-- Alquiler -->
+            
+            
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <div class="container">
+                  <h5>Listar clientes</h5>
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr >
+                        <th scope="col">#</th>
+                        <th scope="col">nombres</th>
+                        <th scope="col">apellidos</th>
+                        <th scope="col">tipo_documento</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">direccion</th>
+                        <th scope="col">um_document</th>
+                        <th scope="col">cargo</th>
+                        <th scope="col">estado</th>
+                        <th>editar</th>
+                        <th>aliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let empleado of empleados">
+                        <td>{{empleado.idempleado}}</td>
+                        <td>{{empleado.nombres}}</td>
+                        <td>{{empleado.apellidos}}</td>
+                        <td>{{empleado.tipo_documento}}</td>
+                        <td>{{empleado.telefono}}</td>
+                        <td>{{empleado.direccion}}</td>
+                        <td>{{empleado.num_documento}}</td>
+                        <td>{{empleado.cargo}}</td>
+                        <td>{{empleado.estado}}</td>
+                        <td class="text-right"><a type="button" class="btn btn-warning"  ><i class="now-ui-icons design-2_ruler-pencil"></i></a></td>
+                  <td><a type="button" class="btn btn-danger" ><i class="now-ui-icons ui-1_simple-remove"></i></a></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+            
+            
+            <div class="tab-pane fade mt-3" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container">
+                    <div class="container-center">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="">Nombres</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="">Apellidos</label>
+                                    <input type="text" class="form-control"  >
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="">Cargo</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="">telefono</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="">Numero de documento</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="">Tipo de documento</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="">Estado</label>
+                                    <input type="text" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Direccion</label>
+                                <input type="text" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                <button class="form-control btn-primary"   >Registra</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+
+            </div>
+
+      </div>
+
+    </div>
+
+    
+</div>

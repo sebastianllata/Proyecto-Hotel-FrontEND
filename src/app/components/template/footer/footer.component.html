@@ -1,0 +1,22 @@
+<div id="container">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+            <div *ngIf="authService.isAuthenticated()" class="navbar-nav" >
+                <a routerLink="{{menu.URL}}" href="#" class="nav-item nav-link active" *ngFor="let menu of menus"><i class="{{menu.ICONO}} margen" ></i>{{menu.NOMACCESO}}</a>
+                <!--
+                <a href="#" class="nav-item nav-link"><i class="fa fa-users margen" aria-hidden="true"></i> Clientes</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-cart-plus margen" aria-hidden="true"></i> Ventas</a>
+                <a routerLink="producto" href="#" class="nav-item nav-link"><i class="fa fa-product-hunt margen" aria-hidden="true"></i>Productos</a>
+                <a routerLink="listar" href="#" class="nav-item nav-link"><i class="fa fa-id-card-o margen" aria-hidden="true"></i>Rol</a>
+                <a routerLink="uploads" class="nav-item nav-link"><i class="fa fa-line-chart margen" aria-hidden="true"></i>Upload</a>
+                -->
+            </div>
+        </div>
+    </ul>
+</div>
